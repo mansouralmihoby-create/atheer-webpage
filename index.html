@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="أثير الإنجليزية هو رفيقك الذكي لإتقان اللغة الإنجليزية من خلال تقنيات التعرف الصوتي وقصص تفاعلية لرفع مستواك.">
+  <meta name="keywords" content="أثير, تعلم الإنجليزية, تعرف صوتي, نطق إنجليزي, إملاء إنجليزي, قصص تفاعلية, تطبيق أثير">
+  <meta name="author" content="Atheer English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="أثير الإنجليزية | رفيقك الذكي لإتقان اللغة الإنجليزية">
+  <meta property="og:description" content="تدرب على نطقك، حسن إملاءك، واستمتع بالقصص العالمية مع تطبيق أثير الإنجليزية.">
+  <meta property="og:image" content="https://atheerapp.com/assets/images/og-preview.png">
+  <meta property="og:url" content="https://atheerapp.com/">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  
+  <title>أثير الإنجليزية | رفيقك الذكي لإتقان اللغة الإنجليزية</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome Icons for modern aesthetic -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- --- HEADER / NAVBAR --- -->
+  <header>
+    <div class="container nav-wrapper">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Atheer Logo" class="brand-logo">
+      </div>
+      
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">
+          <span class="lang-ar">الرئيسية</span>
+          <span class="lang-en">Home</span>
+        </a>
+        <a href="#features" class="nav-link">
+          <span class="lang-ar">الميزات</span>
+          <span class="lang-en">Features</span>
+        </a>
+        <a href="#app-showcase" class="nav-link">
+          <span class="lang-ar">المزايا التفاعلية</span>
+          <span class="lang-en">Interactive Practices</span>
+        </a>
+        <a href="#preview" class="nav-link">
+          <span class="lang-ar">تطبيقات عملية</span>
+          <span class="lang-en">Interactive Lab</span>
+        </a>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="lang-toggle-btn" id="langToggleBtn">EN</button>
+        <div class="nav-cta">
+          <a href="#cta" class="btn btn-secondary">
+            <span class="lang-ar">تحميل التطبيق</span>
+            <span class="lang-en">Download</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- HERO SECTION --- -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span class="lang-ar">التعرف الصوتي المتقدم</span>
+          <span class="lang-en">Advanced Voice Recognition</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="lang-ar">أتقن الإنجليزية بثقة مع <span class="gradient-text">أثير</span></span>
+          <span class="lang-en">Master English with Confidence via <span class="gradient-text">Atheer</span></span>
+        </h1>
+        <p class="hero-description">
+          <span class="lang-ar">رفيقك التعليمي الذكي للتدرب على نطق اللغة الإنجليزية، تحسين الإملاء، وتوسيع حصيلتك اللغوية عبر قصص تفاعلية وكتب عالمية بصوت بشري.</span>
+          <span class="lang-en">Your smart learning companion to practice English pronunciation, improve spelling, and expand vocabulary through interactive stories and global books with human voices.</span>
+        </p>
+        <div class="hero-actions">
+          <a href="#cta" class="btn btn-primary">
+            <span class="lang-ar">ابدأ مجاناً الآن</span>
+            <span class="lang-en">Start Free Now</span>
+          </a>
+          <a href="#preview" class="btn btn-secondary">
+            <span class="lang-ar">شاهد كيف يعمل</span>
+            <span class="lang-en">Watch How It Works</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-mockup-wrapper">
+        <div class="mockup-container">
+          <div class="mockup-header">
+            <span class="mockup-time">9:41</span>
+            <div class="mockup-speaker"></div>
+            <span class="mockup-icons">
+              <i class="fa-solid fa-signal"></i>
+              <i class="fa-solid fa-wifi"></i>
+              <i class="fa-solid fa-battery-full"></i>
+            </span>
+          </div>
+          
+          <div class="mockup-screen">
+            <div class="mockup-app-header">
+              <span class="mockup-app-title">
+                <i class="fa-solid fa-microphone-lines" style="color: var(--accent-primary)"></i>
+                <span class="lang-ar">مدرب الصوت الذكي</span>
+                <span class="lang-en">Smart Voice Coach</span>
+              </span>
+              <span class="mockup-app-status" id="mockupStatus">
+                <span class="logo-dot"></span>
+                <span class="lang-ar">متصل</span>
+                <span class="lang-en">Connected</span>
+              </span>
+            </div>
+            
+            <div class="mockup-chat-area" id="mockupChatArea">
+              <!-- Chat bubbles will be populated by JavaScript -->
+              <div class="chat-bubble ai" style="opacity: 1; transform: none;">
+                <span class="lang-ar">أهلاً بك في أثير! اضغط على زر الميكروفون بالأسفل لنطق الجملة وتقييم مستوى دقة نطقك.</span>
+                <span class="lang-en">Welcome to Atheer! Click the microphone button below to pronounce the sentence and get your accuracy evaluated.</span>
+              </div>
+            </div>
+            
+            <div class="mockup-visualizer-container">
+              <div class="mockup-visualizer" id="mockupVisualizer">
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+                <div class="wave-bar"></div>
+              </div>
+            </div>
+            
+            <div class="mockup-controls">
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <button class="mockup-btn" id="mockupMicBtn">
+                  <i class="fa-solid fa-microphone"></i>
+                </button>
+                <span class="mockup-btn-label">
+                  <span class="lang-ar">اضغط للتحدث</span>
+                  <span class="lang-en">Tap to Speak</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- --- STATS SECTION --- -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">+10K</div>
+        <div class="stat-label">
+          <span class="lang-ar">مستخدم نشط</span>
+          <span class="lang-en">Active Learners</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">
+          <span class="lang-ar">نسبة رضا الدارسين</span>
+          <span class="lang-en">Learner Satisfaction</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">+50K</div>
+        <div class="stat-label">
+          <span class="lang-ar">كلمة ومصطلح</span>
+          <span class="lang-en">Words & Terms</span>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">+1M</div>
+        <div class="stat-label">
+          <span class="lang-ar">جملة تم نطقها وكتابتها</span>
+          <span class="lang-en">Sentences Practiced</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FEATURES SECTION --- -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge" style="align-self: center;">
+          <span class="lang-ar">مميزات لا مثيل لها</span>
+          <span class="lang-en">Outstanding Features</span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-ar">لماذا تختار <span class="gradient-text">تطبيق أثير؟</span></span>
+          <span class="lang-en">Why Choose <span class="gradient-text">Atheer App?</span></span>
+        </h2>
+        <p class="section-subtitle">
+          <span class="lang-ar">لقد صممنا أثير ليكون أداة متكاملة تأخذ بيدك من الصفر وحتى إتقان التحدث والاستماع والكتابة بأسلوب عصري ومحفّز.</span>
+          <span class="lang-en">We designed Atheer to be a complete ecosystem that guides you from scratch to master speaking, listening, and writing in an engaging way.</span>
+        </p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="glass-card feature-card">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-book-open-reader fa-xl" style="color: var(--accent-primary)"></i>
+          </div>
+          <h3 class="feature-title">
+            <span class="lang-ar">قصص وكتب عالمية مقروءة</span>
+            <span class="lang-en">Audio Stories & Books</span>
+          </h3>
+          <p class="feature-desc">
+            <span class="lang-ar">مجموعة واسعة من القصص المتنوعة والكتب العالمية بصوت بشري نقي لتعزيز مهارات الاستماع لديك بطريقة ممتعة.</span>
+            <span class="lang-en">A wide range of diverse stories and global books with crystal-clear human voices to enhance your listening skills.</span>
+          </p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="glass-card feature-card">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-microphone-lines fa-xl" style="color: var(--accent-secondary)"></i>
+          </div>
+          <h3 class="feature-title">
+            <span class="lang-ar">تصحيح النطق بالتعرف الصوتي</span>
+            <span class="lang-en">Voice Pronunciation Coach</span>
+          </h3>
+          <p class="feature-desc">
+            <span class="lang-ar">تقنية تعرف على الصوت متقدمة لتحليل وتصحيح نطقك بدقة، لتتحدث الإنجليزية بثقة كالمتحدثين الأصليين.</span>
+            <span class="lang-en">Advanced voice recognition technology to analyze and correct your pronunciation, helping you speak confidently.</span>
+          </p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="glass-card feature-card">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-swatchbook fa-xl" style="color: var(--accent-teal)"></i>
+          </div>
+          <h3 class="feature-title">
+            <span class="lang-ar">بنك مصطلحات شامل</span>
+            <span class="lang-en">Comprehensive Vocab Bank</span>
+          </h3>
+          <p class="feature-desc">
+            <span class="lang-ar">مفردات كثيرة مع ترجمة دقيقة للكلمات وترجمة سياقية للجمل لتوسيع حصيلتك اللغوية وتتبع مستواك بدقة.</span>
+            <span class="lang-en">A massive vocabulary collection with precise word translation, contextual sentence translations, and accurate level tracking.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- APP SHOWCASE SECTION --- -->
+  <section class="app-showcase" id="app-showcase">
+    <div class="container showcase-grid">
+      
+      <div class="showcase-content">
+        <div class="badge">
+          <span class="lang-ar">تطبيقات عملية ومخصصة</span>
+          <span class="lang-en">Practical & Personalized</span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-ar">تمارين تفاعلية تناسب <span class="gradient-text">احتياجاتك اللغوية</span></span>
+          <span class="lang-en">Interactive Exercises Tailored <span class="gradient-text">To Your Needs</span></span>
+        </h2>
+        <p class="section-subtitle">
+          <span class="lang-ar">صممنا واجهة تطبيق أثير لتكون بسيطة ومحفزة. تتبع الخوارزميات الذكية أدائك وتصنف التمارين اليومية بناءً على مهاراتك ونقاط قوتك وضعفك لمساعدتك في الوصول إلى طلاقة حقيقية بأقصر وقت.</span>
+          <span class="lang-en">We designed Atheer's app interface to be clean and motivating. Smart algorithms track your performance and suggest daily exercises based on your strengths and weaknesses to help you reach fluency in record time.</span>
+        </p>
+        
+        <div class="showcase-features">
+          <div class="showcase-feature-item">
+            <div class="showcase-feature-icon">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <div class="showcase-feature-text">
+              <h4>
+                <span class="lang-ar">مسارات مخصصة بالكامل</span>
+                <span class="lang-en">Tailored Learning Paths</span>
+              </h4>
+              <p>
+                <span class="lang-ar">يتم تعديل صعوبة التمارين والمحتوى تلقائياً ليلائم مستواك الحالي ومتابعة تطورك بشكل دقيق ومستمر.</span>
+                <span class="lang-en">Exercise difficulty and content adjust automatically to suit your current level, tracking your progress accurately and continuously.</span>
+              </p>
+            </div>
+          </div>
+          
+          <div class="showcase-feature-item">
+            <div class="showcase-feature-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="showcase-feature-text">
+              <h4>
+                <span class="lang-ar">تقارير أداء تحليلية</span>
+                <span class="lang-en">Analytical Performance Reports</span>
+              </h4>
+              <p>
+                <span class="lang-ar">تتبع مدى تقدمك اليومي والأسبوعي في مهارات التحدث، الاستماع، الإملاء، والقواعد وحجم حصيلتك اللغوية.</span>
+                <span class="lang-en">Track your daily and weekly progress across speaking, listening, spelling, grammar, and vocabulary metrics.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-mockup-wrapper">
+        <div class="app-mockup-container">
+          <!-- Status bar -->
+          <div class="app-mockup-status-bar">
+            <span class="app-mockup-time">9:41</span>
+            <div class="app-mockup-notch"></div>
+            <div class="app-mockup-icons">
+              <i class="fa-solid fa-signal"></i>
+              <i class="fa-solid fa-wifi"></i>
+              <i class="fa-solid fa-battery-full"></i>
+            </div>
+          </div>
+          
+          <!-- App Header -->
+          <div class="app-mockup-header">
+            <div class="app-mockup-logo">
+              <img src="assets/images/logo.png" alt="Atheer Logo" />
+            </div>
+            <button class="app-mockup-search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          
+          <!-- App Content -->
+          <div class="app-mockup-body">
+            <span class="app-mockup-subtitle">Practices</span>
+            <h3 class="app-mockup-title">Exercises <br>based on <span>your needs</span></h3>
+            
+            <!-- 2x2 Grid of Cards -->
+            <div class="app-mockup-grid">
+              <!-- Card 1: Lavender (Speaking) -->
+              <div class="app-mockup-card card-lavender" id="mockupCardSpeaking">
+                <div class="card-inner">
+                  <h4 class="card-title">Voice<br>Correction</h4>
+                  <button class="card-arrow-btn">↗</button>
+                </div>
+              </div>
+              
+              <!-- Card 2: Yellow (Terminology Bank) -->
+              <div class="app-mockup-card card-yellow" id="mockupCardDictation">
+                <div class="card-inner">
+                  <h4 class="card-title">Terminology<br>Bank</h4>
+                  <!-- Custom SVG Line Art (Book/Dictionary) -->
+                  <div class="card-illustration">
+                    <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Line art head outline -->
+                      <path d="M20 70 C25 65, 30 50, 30 40 C30 30, 45 28, 50 30 C55 32, 60 40, 60 50 C60 55, 65 58, 68 62 C70 65, 75 70, 75 75" fill="none" stroke="#2c2a1a" stroke-width="1.8" stroke-linecap="round"/>
+                      <path d="M50 30 C48 20, 40 15, 30 15 C20 15, 25 30, 35 30" fill="none" stroke="#2c2a1a" stroke-width="1.5" stroke-linecap="round"/>
+                      <path d="M55 35 C65 25, 75 28, 72 15 C68 8, 55 18, 55 30" fill="none" stroke="#2c2a1a" stroke-width="1.5" stroke-linecap="round"/>
+                      <circle cx="68" cy="22" r="3.5" fill="#cba21e" />
+                      <!-- Additional leaf -->
+                      <path d="M42 22 Q46 12 40 8 Q34 12 38 22 Z" fill="none" stroke="#2c2a1a" stroke-width="1.2" />
+                    </svg>
+                  </div>
+                  <button class="card-arrow-btn">↗</button>
+                </div>
+              </div>
+              
+              <!-- Card 3: Green (Level Tracking) -->
+              <div class="app-mockup-card card-green" id="mockupCardLevel">
+                <div class="card-inner">
+                  <h4 class="card-title">Level<br>Tracking</h4>
+                  <!-- Custom SVG Line Art (Chart/Progress) -->
+                  <div class="card-illustration">
+                    <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                      <!-- Head and branches -->
+                      <path d="M25 70 C30 65, 35 52, 35 45 C35 38, 48 35, 52 38 C55 40, 58 48, 58 55 C58 60, 65 62, 68 68" fill="none" stroke="#1d3027" stroke-width="1.8" stroke-linecap="round"/>
+                      <path d="M45 42 L45 20 C45 15, 50 10, 60 8" fill="none" stroke="#1d3027" stroke-width="1.5" />
+                      <!-- Leaves -->
+                      <path d="M45 32 Q58 30 62 25" fill="none" stroke="#1d3027" stroke-width="1.5" />
+                      <path d="M45 26 Q32 25 28 18" fill="none" stroke="#1d3027" stroke-width="1.5" />
+                      <circle cx="60" cy="18" r="3.5" fill="#4d9b78" opacity="0.6"/>
+                      <circle cx="28" cy="30" r="3" fill="#4d9b78" opacity="0.6"/>
+                    </svg>
+                  </div>
+                  <button class="card-arrow-btn">↗</button>
+                </div>
+              </div>
+              
+              <!-- Card 4: Beige (Stories) -->
+              <div class="app-mockup-card card-beige" id="mockupCardStories">
+                <div class="card-inner">
+                  <h4 class="card-title">Interactive<br>Stories</h4>
+                  <button class="card-arrow-btn">↗</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- --- PREVIEW SECTION --- -->
+  <section class="preview-section" id="preview">
+    <div class="container preview-grid">
+      
+      <div class="glass-card preview-visual-card">
+        <h3 style="font-family: var(--font-en); font-size: 1.2rem; text-align: left; color: var(--accent-teal);">
+          <i class="fa-solid fa-keyboard"></i> Dictation Lab
+        </h3>
+        
+        <div class="dictation-demo-box">
+          <div class="dictation-sentence">
+            <span class="dictation-word"></span>
+            <span class="dictation-word"></span>
+            <span class="dictation-word"></span>
+            <span class="dictation-word"></span>
+            <span class="dictation-word"></span>
+            <span class="dictation-word"></span>
+            <span class="dictation-word"></span>
+            <span class="dictation-word"></span>
+          </div>
+          
+          <div class="dictation-input-mock">
+            <span class="dictation-mock-text"><span class="dictation-cursor"></span></span>
+            <i class="fa-solid fa-microphone-slash" style="color: var(--text-muted)"></i>
+          </div>
+        </div>
+        
+        <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: right;">
+          <span class="lang-ar">* نموذج تفاعلي يوضح كيف يصحح أثير الإملاء كلمة بكلمة أثناء الاستماع.</span>
+          <span class="lang-en">* Interactive demo showing how Atheer corrects spelling word-by-word while listening.</span>
+        </p>
+      </div>
+
+      <div class="preview-content">
+        <div class="badge">
+          <span class="lang-ar">عِش التجربة</span>
+          <span class="lang-en">Experience Atheer</span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-ar">بيئة تعليمية <span class="gradient-text">حيوية وممتعة</span></span>
+          <span class="lang-en">An Engaging, <span class="gradient-text">Vibrant Lab</span></span>
+        </h2>
+        <p class="section-subtitle">
+          <span class="lang-ar">لا نعتمد على الحفظ التلقيني، بل على الممارسة العملية الفورية والمستمرة.</span>
+          <span class="lang-en">We don't rely on rote memorization, but on direct, interactive, and continuous practice.</span>
+        </p>
+        
+        <div class="preview-features-list">
+          <div class="preview-feature-item">
+            <div class="preview-feature-check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="preview-feature-text">
+              <h4>
+                <span class="lang-ar">تحليل النطق الفوري</span>
+                <span class="lang-en">Instant Pronunciation Feedback</span>
+              </h4>
+              <p>
+                <span class="lang-ar">تغذية راجعة فورية توضح الكلمات التي تحتاج إلى تحسين في نطقك.</span>
+                <span class="lang-en">Instant feedback highlighting words that require improvement in your accent and pronunciation.</span>
+              </p>
+            </div>
+          </div>
+          
+          <div class="preview-feature-item">
+            <div class="preview-feature-check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="preview-feature-text">
+              <h4>
+                <span class="lang-ar">مستويات متدرجة الصعوبة</span>
+                <span class="lang-en">Graded Difficulty Levels</span>
+              </h4>
+              <p>
+                <span class="lang-ar">من المبتدئ إلى المتقدم، لتناسب الدارس العادي وتتطور معه باستمرار وتتبع مستواه بدقة.</span>
+                <span class="lang-en">From beginner to advanced, evolving with your progress and accurately tracking your level.</span>
+              </p>
+            </div>
+          </div>
+          
+          <div class="preview-feature-item">
+            <div class="preview-feature-check">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="preview-feature-text">
+              <h4>
+                <span class="lang-ar">قصص إنجليزية مسموعة ومكتوبة</span>
+                <span class="lang-en">Bilingual Audio Stories</span>
+              </h4>
+              <p>
+                <span class="lang-ar">مكتبة واسعة من القصص التفاعلية التي تتيح لك القراءة والاستماع في آن واحد لدعم مهارات الفهم.</span>
+                <span class="lang-en">A rich library of interactive stories allowing you to read and listen simultaneously to support comprehension.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- --- CTA SECTION --- -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="glass-card cta-box">
+        <h2 class="cta-title">
+          <span class="lang-ar">هل أنت مستعد لبدء رحلتك؟</span>
+          <span class="lang-en">Ready to Start Your Journey?</span>
+        </h2>
+        <p class="cta-desc">
+          <span class="lang-ar">انضم إلى آلاف الطلاب الذين طوروا مهاراتهم اللغوية الإنجليزية بثقة عبر أثير.</span>
+          <span class="lang-en">Join thousands of students who confidently improved their English skills with Atheer.</span>
+        </p>
+        
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary" style="gap: 10px;">
+            <i class="fa-brands fa-apple fa-lg"></i>
+            <span class="lang-ar">متجر التطبيقات</span>
+            <span class="lang-en">App Store</span>
+          </a>
+          <a href="#" class="btn btn-secondary" style="gap: 10px;">
+            <i class="fa-brands fa-google-play fa-lg"></i>
+            <span class="lang-ar">جوجل بلاي</span>
+            <span class="lang-en">Google Play</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom: 0.5rem;">
+            <img src="assets/images/logo.png" alt="Atheer Logo" class="brand-logo">
+          </div>
+          <p>
+            <span class="lang-ar">رفيقك الذكي لتعلم وإتقان اللغة الإنجليزية عبر تقنيات التعرف الصوتي وقصص تفاعلية لتطوير مستواك بشكل دقيق.</span>
+            <span class="lang-en">Your smart companion to learn and master English through voice recognition and interactive stories to track your level accurately.</span>
+          </p>
+          <div class="social-links">
+            <a href="https://www.tiktok.com/@atheerengapp" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/@atheerenglishapp" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:admin@atheerapp.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+          <div class="footer-downloads">
+            <a href="#" class="footer-download-btn">
+              <i class="fa-brands fa-apple"></i>
+              <div class="btn-text">
+                <span class="btn-label-en">Download on the</span>
+                <span class="btn-label-ar">تحميل من</span>
+                <span class="btn-store">App Store</span>
+              </div>
+            </a>
+            <a href="#" class="footer-download-btn">
+              <i class="fa-brands fa-google-play"></i>
+              <div class="btn-text">
+                <span class="btn-label-en">Get it on</span>
+                <span class="btn-label-ar">تحميل من</span>
+                <span class="btn-store">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">
+            <span class="lang-ar">روابط سريعة</span>
+            <span class="lang-en">Quick Links</span>
+          </h4>
+          <ul>
+            <li><a href="#hero"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a></li>
+            <li><a href="#features"><span class="lang-ar">الميزات</span><span class="lang-en">Features</span></a></li>
+            <li><a href="#app-showcase"><span class="lang-ar">المزايا التفاعلية</span><span class="lang-en">Interactive Practices</span></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">
+            <span class="lang-ar">الدعم والمساعدة</span>
+            <span class="lang-en">Support & Help</span>
+          </h4>
+          <ul>
+            <li><a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact Us</span></a></li>
+            <li><a href="mailto:admin@atheerapp.com"><span class="lang-ar">البريد الإلكتروني</span><span class="lang-en">Email Support</span></a></li>
+            <li><a href="tel:+966570491716"><span class="lang-ar">هاتف: +٩٦٦٥٧٠٤٩١٧١٦</span><span class="lang-en">Call: +966570491716</span></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">
+            <span class="lang-ar">قوانين وشروط</span>
+            <span class="lang-en">Legal & Terms</span>
+          </h4>
+          <ul>
+            <li><a href="privacy.html"><span class="lang-ar">سياسة الخصوصية</span><span class="lang-en">Privacy Policy</span></a></li>
+            <li><a href="terms.html"><span class="lang-ar">شروط الاستخدام</span><span class="lang-en">Terms of Use</span></a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>
+          <span class="lang-ar">جميع الحقوق محفوظة &copy; 2026 تطبيق أثير الإنجليزية.</span>
+          <span class="lang-en">All rights reserved &copy; 2026 Atheer English App.</span>
+        </p>
+        <p>
+          <span class="lang-ar">صُمم بحب لمساعدة الدارسين العرب.</span>
+          <span class="lang-en">Designed with love to support Arabic learners.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>

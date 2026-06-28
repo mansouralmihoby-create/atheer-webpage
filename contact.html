@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="اتصل بنا - تطبيق أثير الإنجليزية. نحن هنا لمساعدتك في الاستفسارات والدعم الفني.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="اتصل بنا | أثير الإنجليزية">
+  <meta property="og:url" content="https://atheerapp.com/contact.html">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  
+  <title class="lang-ar">اتصل بنا | أثير الإنجليزية</title>
+  <title class="lang-en">Contact Us | Atheer English</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- --- HEADER / NAVBAR --- -->
+  <header>
+    <div class="container nav-wrapper">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="Atheer Logo" class="brand-logo">
+        </a>
+      </div>
+      
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html#hero" class="nav-link">
+          <span class="lang-ar">الرئيسية</span>
+          <span class="lang-en">Home</span>
+        </a>
+        <a href="index.html#features" class="nav-link">
+          <span class="lang-ar">الميزات</span>
+          <span class="lang-en">Features</span>
+        </a>
+        <a href="index.html#app-showcase" class="nav-link">
+          <span class="lang-ar">المزايا التفاعلية</span>
+          <span class="lang-en">Interactive Practices</span>
+        </a>
+        <a href="contact.html" class="nav-link active">
+          <span class="lang-ar">اتصل بنا</span>
+          <span class="lang-en">Contact Us</span>
+        </a>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="lang-toggle-btn" id="langToggleBtn">EN</button>
+        <div class="nav-cta">
+          <a href="index.html#cta" class="btn btn-secondary">
+            <span class="lang-ar">تحميل التطبيق</span>
+            <span class="lang-en">Download</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- CONTACT CONTENT --- -->
+  <section class="subpage-content" style="padding-top: 140px; padding-bottom: 80px;">
+    <div class="container">
+      <div class="section-header" style="max-width: 600px; margin-bottom: 3rem;">
+        <div class="badge" style="align-self: center;">
+          <span class="lang-ar">تواصل معنا</span>
+          <span class="lang-en">Get in Touch</span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-ar">يسعدنا <span class="gradient-text">سماع صوتك</span></span>
+          <span class="lang-en">We'd love to <span class="gradient-text">hear from you</span></span>
+        </h2>
+        <p class="section-subtitle">
+          <span class="lang-ar">لديك استفسار أو اقتراح؟ فريق الدعم في أثير مستعد لمساعدتك على مدار الساعة.</span>
+          <span class="lang-en">Have a question or feedback? Atheer's support team is here to assist you 24/7.</span>
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Information Cards -->
+        <div class="contact-info">
+          <!-- Card 1: Phone -->
+          <div class="glass-card contact-card">
+            <div class="contact-card-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-card-details">
+              <h4>
+                <span class="lang-ar">رقم الهاتف</span>
+                <span class="lang-en">Phone Number</span>
+              </h4>
+              <p>
+                <a href="tel:+966570491716" style="color: inherit; font-weight: 600;">+966570491716</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Email -->
+          <div class="glass-card contact-card">
+            <div class="contact-card-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-card-details">
+              <h4>
+                <span class="lang-ar">البريد الإلكتروني</span>
+                <span class="lang-en">Email Address</span>
+              </h4>
+              <p>
+                <a href="mailto:admin@atheerapp.com" style="color: inherit; font-weight: 600;">admin@atheerapp.com</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Address -->
+          <div class="glass-card contact-card">
+            <div class="contact-card-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-card-details">
+              <h4>
+                <span class="lang-ar">الموقع الجغرافي</span>
+                <span class="lang-en">Our Location</span>
+              </h4>
+              <p>
+                <span class="lang-ar">الرياض، المملكة العربية السعودية</span>
+                <span class="lang-en">Riyadh, Saudi Arabia</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="glass-card contact-form-card">
+          <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you for contacting Atheer!');">
+            <div class="form-row">
+              <div class="form-group">
+                <label>
+                  <span class="lang-ar">الاسم الكامل</span>
+                  <span class="lang-en">Full Name</span>
+                </label>
+                <input type="text" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label>
+                  <span class="lang-ar">البريد الإلكتروني</span>
+                  <span class="lang-en">Email Address</span>
+                </label>
+                <input type="email" required placeholder="example@email.com">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>
+                <span class="lang-ar">الموضوع</span>
+                <span class="lang-en">Subject</span>
+              </label>
+              <input type="text" required placeholder="Subject">
+            </div>
+
+            <div class="form-group">
+              <label>
+                <span class="lang-ar">رسالتك</span>
+                <span class="lang-en">Your Message</span>
+              </label>
+              <textarea rows="5" required placeholder="Message details..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: var(--shape-corner-sm); margin-top: 1rem;">
+              <span class="lang-ar">إرسال الرسالة</span>
+              <span class="lang-en">Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom: 0.5rem;">
+            <img src="assets/images/logo.png" alt="Atheer Logo" class="brand-logo">
+          </div>
+          <p>
+            <span class="lang-ar">رفيقك الذكي لتعلم وإتقان اللغة الإنجليزية عبر تقنيات التعرف الصوتي وقصص تفاعلية لتطوير مستواك بشكل دقيق.</span>
+            <span class="lang-en">Your smart companion to learn and master English through voice recognition and interactive stories to track your level accurately.</span>
+          </p>
+          <div class="social-links">
+            <a href="https://www.tiktok.com/@atheerengapp" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/@atheerenglishapp" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:admin@atheerapp.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+          <div class="footer-downloads">
+            <a href="#" class="footer-download-btn">
+              <i class="fa-brands fa-apple"></i>
+              <div class="btn-text">
+                <span class="btn-label-en">Download on the</span>
+                <span class="btn-label-ar">تحميل من</span>
+                <span class="btn-store">App Store</span>
+              </div>
+            </a>
+            <a href="#" class="footer-download-btn">
+              <i class="fa-brands fa-google-play"></i>
+              <div class="btn-text">
+                <span class="btn-label-en">Get it on</span>
+                <span class="btn-label-ar">تحميل من</span>
+                <span class="btn-store">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">
+            <span class="lang-ar">روابط سريعة</span>
+            <span class="lang-en">Quick Links</span>
+          </h4>
+          <ul>
+            <li><a href="index.html#hero"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a></li>
+            <li><a href="index.html#features"><span class="lang-ar">الميزات</span><span class="lang-en">Features</span></a></li>
+            <li><a href="index.html#app-showcase"><span class="lang-ar">المزايا التفاعلية</span><span class="lang-en">Interactive Practices</span></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">
+            <span class="lang-ar">الدعم والمساعدة</span>
+            <span class="lang-en">Support & Help</span>
+          </h4>
+          <ul>
+            <li><a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact Us</span></a></li>
+            <li><a href="mailto:admin@atheerapp.com"><span class="lang-ar">البريد الإلكتروني</span><span class="lang-en">Email Support</span></a></li>
+            <li><a href="tel:+966570491716"><span class="lang-ar">هاتف: +٩٦٦٥٧٠٤٩١٧١٦</span><span class="lang-en">Call: +966570491716</span></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">
+            <span class="lang-ar">قوانين وشروط</span>
+            <span class="lang-en">Legal & Terms</span>
+          </h4>
+          <ul>
+            <li><a href="privacy.html"><span class="lang-ar">سياسة الخصوصية</span><span class="lang-en">Privacy Policy</span></a></li>
+            <li><a href="terms.html"><span class="lang-ar">شروط الاستخدام</span><span class="lang-en">Terms of Use</span></a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>
+          <span class="lang-ar">جميع الحقوق محفوظة &copy; 2026 تطبيق أثير الإنجليزية.</span>
+          <span class="lang-en">All rights reserved &copy; 2026 Atheer English App.</span>
+        </p>
+        <p>
+          <span class="lang-ar">صُمم بحب لمساعدة الدارسين العرب.</span>
+          <span class="lang-en">Designed with love to support Arabic learners.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
