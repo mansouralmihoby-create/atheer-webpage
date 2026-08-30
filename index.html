@@ -3,567 +3,336 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="أثير لتعليم الإنجليزية - رفيقك الذكي لإتقان اللغة الإنجليزية عبر القصص الصوتية التفاعلية، معمل الإملاء والاستماع، والدردشة الصوتية الحية مع الذكاء الاصطناعي.">
-  <meta name="keywords" content="أثير, تعلم الإنجليزية, تطبيق أثير, إملاء إنجليزي, محادثة صوتية, قصص إنجليزية, نطق إنجليزي, اختبار ستيب, IELTS">
+  <meta name="description" content="أثير لتعليم الإنجليزية - تطبيق لتعلم وتطوير مهارات اللغة الإنجليزية من خلال القصص المسموعة، معمل الإملاء والاستماع، والمحادثة الصوتية الذكية.">
+  <meta name="keywords" content="أثير, تعلم الإنجليزية, تطبيق أثير, إملاء إنجليزي, محادثة صوتية, قصص إنجليزية, نطق إنجليزي, اختبار ستيب">
   <meta name="author" content="Atheer English">
   
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="أثير لتعليم الإنجليزية | رفيقك الذكي لإتقان اللغة الإنجليزية">
-  <meta property="og:description" content="تدرب على النطق، أتقن الإملاء، وتحدث بطلاقة مع المساعد الصوتي الذكي والقصص العالمية في تطبيق أثير.">
-  <meta property="og:image" content="https://atheerapp.com/assets/images/og-preview.png">
+  <meta property="og:title" content="أثير لتعليم الإنجليزية | Atheer English">
+  <meta property="og:description" content="تعلم الإنجليزية عبر القصص المسموعة، معمل الإملاء، والمحادثة الصوتية المباشرة.">
   <meta property="og:url" content="https://atheerapp.com/">
   
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
   
-  <title class="lang-ar">أثير لتعليم الإنجليزية | رفيقك الذكي لإتقان اللغة الإنجليزية</title>
-  <title class="lang-en">Atheer English | Your Smart Companion to Master English</title>
+  <title class="lang-ar">أثير لتعليم الإنجليزية | رفيقك لتعلم اللغة</title>
+  <title class="lang-en">Atheer English | Learn English with Stories & Voice</title>
   
-  <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="style.css">
-  
-  <!-- FontAwesome Icons for modern aesthetic -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- --- HEADER / NAVBAR --- -->
+  <!-- --- HEADER --- -->
   <header>
     <div class="container nav-wrapper">
       <div class="logo">
         <a href="index.html">
           <img src="assets/images/logo.png" alt="Atheer Logo" class="brand-logo">
+          <span class="brand-name">
+            <span class="lang-ar">أثير</span>
+            <span class="lang-en">Atheer</span>
+          </span>
         </a>
       </div>
       
-      <nav class="nav-menu" id="navMenu">
-        <a href="#hero" class="nav-link active">
-          <span class="lang-ar">الرئيسية</span>
-          <span class="lang-en">Home</span>
-        </a>
+      <nav class="nav-menu">
         <a href="#features" class="nav-link">
           <span class="lang-ar">الميزات</span>
           <span class="lang-en">Features</span>
         </a>
-        <a href="#app-showcase" class="nav-link">
-          <span class="lang-ar">معمل التدريبات</span>
-          <span class="lang-en">Practice Hub</span>
-        </a>
-        <a href="#preview" class="nav-link">
+        <a href="#dictation" class="nav-link">
           <span class="lang-ar">معمل الإملاء</span>
           <span class="lang-en">Dictation Lab</span>
         </a>
-        <a href="contact.html" class="nav-link">
-          <span class="lang-ar">اتصل بنا</span>
-          <span class="lang-en">Contact</span>
+        <a href="privacy.html" class="nav-link">
+          <span class="lang-ar">الخصوصية</span>
+          <span class="lang-en">Privacy</span>
+        </a>
+        <a href="terms.html" class="nav-link">
+          <span class="lang-ar">الشروط</span>
+          <span class="lang-en">Terms</span>
         </a>
       </nav>
       
       <div class="header-actions">
-        <button class="lang-toggle-btn" id="langToggleBtn">EN</button>
-        <div class="nav-cta">
-          <a href="#cta" class="btn btn-secondary">
-            <span class="lang-ar">تحميل التطبيق</span>
-            <span class="lang-en">Download</span>
-          </a>
-        </div>
-      </div>
-      
-      <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+        <button class="lang-btn" id="langToggleBtn">English</button>
+        <a href="https://apps.apple.com/app/id6770676137" target="_blank" rel="noopener noreferrer" class="btn-nav-download">
+          <i class="fa-brands fa-apple"></i>
+          <span class="lang-ar">تحميل التطبيق</span>
+          <span class="lang-en">Download</span>
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- --- HERO SECTION --- -->
-  <section class="hero" id="hero">
+  <!-- --- HERO --- -->
+  <section class="hero">
     <div class="container hero-grid">
       
       <div class="hero-content">
-        <div class="badge">
-          <span class="badge-dot"></span>
-          <span class="lang-ar">التعلم التفاعلي والذكاء الاصطناعي</span>
-          <span class="lang-en">AI-Powered English Learning</span>
+        <div class="hero-tag">
+          <i class="fa-solid fa-sparkles"></i>
+          <span class="lang-ar">تطبيق تفاعلي لتعلم اللغة الإنجليزية</span>
+          <span class="lang-en">Interactive English Learning App</span>
         </div>
+        
         <h1 class="hero-title">
-          <span class="lang-ar">أتقن الإنجليزية بثقة مع <span class="gradient-text">أثير</span></span>
-          <span class="lang-en">Master English with Confidence via <span class="gradient-text">Atheer</span></span>
+          <span class="lang-ar">تعلم الإنجليزية بالممارسة من خلال <span class="highlight">القصص والاستماع</span></span>
+          <span class="lang-en">Learn English by Practicing <span class="highlight">Stories & Listening</span></span>
         </h1>
-        <p class="hero-description">
-          <span class="lang-ar">منظومة تعليمية متكاملة تجمع بين القصص والروايات العالمية المسموعة، معمل الإملاء والاستماع الفوري، والدردشة الصوتية الحية مع المساعد الذكي "أثير" لتصل إلى الطلاقة اللغوية بثقة.</span>
-          <span class="lang-en">An all-in-one learning ecosystem combining audio stories and classic books, real-time dictation & spelling lab, and live AI voice conversations to help you achieve genuine fluency.</span>
-        </p>
-        <div class="hero-actions">
-          <a href="#cta" class="btn btn-primary">
-            <span class="lang-ar">ابدأ رحلتك مجاناً</span>
-            <span class="lang-en">Start Free Now</span>
-          </a>
-          <a href="#preview" class="btn btn-secondary">
-            <span class="lang-ar">استكشف معمل الإملاء</span>
-            <span class="lang-en">Explore Dictation</span>
-          </a>
-        </div>
-      </div>
-      
-      <div class="hero-mockup-wrapper">
-        <div class="mockup-container">
-          <div class="mockup-header">
-            <span class="mockup-time">9:41</span>
-            <div class="mockup-speaker"></div>
-            <span class="mockup-icons">
-              <i class="fa-solid fa-signal"></i>
-              <i class="fa-solid fa-wifi"></i>
-              <i class="fa-solid fa-battery-full"></i>
-            </span>
-          </div>
-          
-          <div class="mockup-screen">
-            <div class="mockup-app-header">
-              <span class="mockup-app-title">
-                <i class="fa-solid fa-microphone-lines" style="color: var(--accent-primary)"></i>
-                <span class="lang-ar">الدردشة الصوتية مع أثير</span>
-                <span class="lang-en">Hala Atheer Voice Chat</span>
-              </span>
-              <span class="mockup-app-status" id="mockupStatus">
-                <span class="logo-dot"></span>
-                <span class="lang-ar">متصل</span>
-                <span class="lang-en">Connected</span>
-              </span>
-            </div>
-            
-            <div class="mockup-chat-area" id="mockupChatArea">
-              <!-- Chat bubbles -->
-              <div class="chat-bubble ai" style="opacity: 1; transform: none;">
-                <span class="lang-ar">أهلاً بك في أثير! اختر سيناريو المحادثة وتحدث معي بالصوت مباشرة لتطوير طلاقتك وتصحيح القواعد.</span>
-                <span class="lang-en">Welcome to Atheer! Choose any conversation scenario and speak with me live to improve your fluency and grammar.</span>
-              </div>
-            </div>
-            
-            <div class="mockup-visualizer-container">
-              <div class="mockup-visualizer" id="mockupVisualizer">
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-              </div>
-            </div>
-            
-            <div class="mockup-controls">
-              <div style="display: flex; flex-direction: column; align-items: center;">
-                <button class="mockup-btn" id="mockupMicBtn">
-                  <i class="fa-solid fa-microphone"></i>
-                </button>
-                <span class="mockup-btn-label">
-                  <span class="lang-ar">اضغط للتحدث</span>
-                  <span class="lang-en">Tap to Speak</span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </section>
-
-  <!-- --- STATS SECTION --- -->
-  <section class="stats">
-    <div class="container stats-grid">
-      <div class="stat-item">
-        <div class="stat-number">+195</div>
-        <div class="stat-label">
-          <span class="lang-ar">قصة ورواية مسموعة</span>
-          <span class="lang-en">Audio Stories & Classics</span>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">100</div>
-        <div class="stat-label">
-          <span class="lang-ar">جملة إملائية بصوت بطيء وعادي</span>
-          <span class="lang-en">Essential Dictation Sentences</span>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">10</div>
-        <div class="stat-label">
-          <span class="lang-ar">سيناريوهات محادثة واقعية</span>
-          <span class="lang-en">Live Voice Scenarios</span>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">A1-C2</div>
-        <div class="stat-label">
-          <span class="lang-ar">تدرج مستويات CEFR الأوروبية</span>
-          <span class="lang-en">CEFR Graded Levels</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- FEATURES SECTION --- -->
-  <section class="features" id="features">
-    <div class="container">
-      <div class="section-header">
-        <div class="badge" style="align-self: center;">
-          <span class="lang-ar">منظومة تعليمية متكاملة</span>
-          <span class="lang-en">Comprehensive Ecosystem</span>
-        </div>
-        <h2 class="section-title">
-          <span class="lang-ar">كل ما تحتاجه لإتقان الإنجليزية <span class="gradient-text">في مكان واحد</span></span>
-          <span class="lang-en">Everything You Need to Master English <span class="gradient-text">In One Place</span></span>
-        </h2>
-        <p class="section-subtitle">
-          <span class="lang-ar">صُمم أثير ليعالج التحديات الحقيقية لمتعلمي اللغة: الخوف من التحدث، ضعف الاستماع، وصعوبات الإملاء وحفظ الكلمات.</span>
-          <span class="lang-en">Atheer is engineered to overcome real learning hurdles: speaking hesitation, listening comprehension, spelling accuracy, and vocabulary retention.</span>
-        </p>
-      </div>
-      
-      <div class="features-grid">
-        <!-- Feature 1: Stories -->
-        <div class="glass-card feature-card">
-          <div class="feature-icon-wrapper">
-            <i class="fa-solid fa-book-open-reader fa-xl" style="color: var(--accent-primary)"></i>
-          </div>
-          <h3 class="feature-title">
-            <span class="lang-ar">مكتبة القصص والروايات العالمية</span>
-            <span class="lang-en">Audio Stories & Classics</span>
-          </h3>
-          <p class="feature-desc">
-            <span class="lang-ar">أكثر من ١٩٥ قصة ورواية بأصوات بشرية مسجلة نقية مع تظليل متزامن للكلمات وترجمة فورية بنقرة واحدة.</span>
-            <span class="lang-en">195+ graded stories and classics with native human narrations, synchronized highlighting, and instant word lookups.</span>
-          </p>
-        </div>
         
-        <!-- Feature 2: Dictation Lab -->
-        <div class="glass-card feature-card">
-          <div class="feature-icon-wrapper">
-            <i class="fa-solid fa-keyboard fa-xl" style="color: var(--accent-teal)"></i>
-          </div>
-          <h3 class="feature-title">
-            <span class="lang-ar">معمل الإملاء والاستماع الفوري</span>
-            <span class="lang-en">Dictation & Spelling Lab</span>
-          </h3>
-          <p class="feature-desc">
-            <span class="lang-ar">تدرب على ١٠٠ جملة أساسية مع خياري الصوت العادي والبطيء (كلمة بكلمة) بالإضافة إلى إملاء القصص المتسلسل.</span>
-            <span class="lang-en">Master 100 essential sentences with normal and slow word-by-word human audio, plus story dictation mode.</span>
-          </p>
-        </div>
-        
-        <!-- Feature 3: Voice Chat -->
-        <div class="glass-card feature-card">
-          <div class="feature-icon-wrapper">
-            <i class="fa-solid fa-headset fa-xl" style="color: var(--accent-secondary)"></i>
-          </div>
-          <h3 class="feature-title">
-            <span class="lang-ar">محادثة صوتية حية مع «أثير»</span>
-            <span class="lang-en">Live AI Voice Conversation</span>
-          </h3>
-          <p class="feature-desc">
-            <span class="lang-ar">تحدث بالصوت في ١٠ سيناريوهات واقعية (المطار، الفندق، مقابلات العمل، والمطعم) مع تصحيح ذكي للقواعد والعبارات.</span>
-            <span class="lang-en">Practice speaking in 10 real-world scenarios (interviews, travel, IELTS) with instant grammatical and fluency feedback.</span>
-          </p>
-        </div>
-
-        <!-- Feature 4: Vocab Bank -->
-        <div class="glass-card feature-card">
-          <div class="feature-icon-wrapper">
-            <i class="fa-solid fa-layer-group fa-xl" style="color: #F59E0B"></i>
-          </div>
-          <h3 class="feature-title">
-            <span class="lang-ar">بنك المفردات والتكرار المتباعد</span>
-            <span class="lang-en">Vocab Bank & Spaced Repetition</span>
-          </h3>
-          <p class="feature-desc">
-            <span class="lang-ar">احفظ أي كلمة تصادفك أثناء القراءة بضغطة زر وراجعها بنظام الفلاش كاردز لتثبيتها في الذاكرة طويلة المدى.</span>
-            <span class="lang-en">Save any encountered word with one tap and review it using smart spaced repetition flashcards for permanent retention.</span>
-          </p>
-        </div>
-
-        <!-- Feature 5: STEP & IELTS -->
-        <div class="glass-card feature-card">
-          <div class="feature-icon-wrapper">
-            <i class="fa-solid fa-graduation-cap fa-xl" style="color: #10B981"></i>
-          </div>
-          <h3 class="feature-title">
-            <span class="lang-ar">نماذج تدريبية لاختبار STEP و IELTS</span>
-            <span class="lang-en">STEP & IELTS Exam Prep</span>
-          </h3>
-          <p class="feature-desc">
-            <span class="lang-ar">أسئلة ونماذج قياسية وتدريبات أثير ستيد المخصصة لرفع درجتك في الاختبارات الوطنية والدولية.</span>
-            <span class="lang-en">Standard mock questions and specialized practice drills to boost your scores in standard English tests.</span>
-          </p>
-        </div>
-
-        <!-- Feature 6: CEFR Tracking -->
-        <div class="glass-card feature-card">
-          <div class="feature-icon-wrapper">
-            <i class="fa-solid fa-chart-pie fa-xl" style="color: #8B5CF6"></i>
-          </div>
-          <h3 class="feature-title">
-            <span class="lang-ar">تتبع التقدم ومقياس CEFR</span>
-            <span class="lang-en">CEFR Growth & Badges</span>
-          </h3>
-          <p class="feature-desc">
-            <span class="lang-ar">قياس مستمر لعدد الكلمات المقروءة، وساعات الاستماع، وتدرج المستويات مع أوسمة تحفيزية ونقاط خبرة (XP).</span>
-            <span class="lang-en">Accurate tracking of read words, listening hours, level advancements, motivational badges, and XP milestones.</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- APP SHOWCASE SECTION --- -->
-  <section class="app-showcase" id="app-showcase">
-    <div class="container showcase-grid">
-      
-      <div class="showcase-content">
-        <div class="badge">
-          <span class="lang-ar">واجهة عصرية ومحفزة</span>
-          <span class="lang-en">Modern & Motivating Interface</span>
-        </div>
-        <h2 class="section-title">
-          <span class="lang-ar">تجربة استخدام تدمج بين <span class="gradient-text">البساطة والمتعة</span></span>
-          <span class="lang-en">User Experience Combining <span class="gradient-text">Simplicity & Joy</span></span>
-        </h2>
-        <p class="section-subtitle">
-          <span class="lang-ar">صممنا تطبيق أثير ليوفر بيئة خالية من التشتت، مع دعم كامل للوضع الليلي المريح للعين، وإمكانية الاستماع في الخلفية أثناء تنقلك اليومي.</span>
-          <span class="lang-en">A distraction-free environment with full Dark Mode support and seamless background audio playback on the go.</span>
+        <p class="hero-desc">
+          <span class="lang-ar">منصة تجمع بين الاستماع للقصص والروايات بأصوات بشرية مسجلة، وتدريب الإملاء التفاعلي لكتابة الجمل بدقة، والمحادثة الصوتية المباشرة لتطوير طلاقتك.</span>
+          <span class="lang-en">A platform combining human-narrated stories and classics, interactive dictation training for accurate spelling, and real-time voice chat to build your speaking fluency.</span>
         </p>
         
-        <div class="showcase-features">
-          <div class="showcase-feature-item">
-            <div class="showcase-feature-icon">
-              <i class="fa-solid fa-moon"></i>
-            </div>
-            <div class="showcase-feature-text">
-              <h4>
-                <span class="lang-ar">المظهر الليلي والنهاري الفاخر</span>
-                <span class="lang-en">Premium Dark & Light Modes</span>
-              </h4>
-              <p>
-                <span class="lang-ar">تصميم متناسق ومريح للقراءة والاستماع في كافة الأوقات.</span>
-                <span class="lang-en">Harmonious design engineered for effortless reading in any lighting condition.</span>
-              </p>
-            </div>
-          </div>
-          
-          <div class="showcase-feature-item">
-            <div class="showcase-feature-icon">
-              <i class="fa-solid fa-cloud-arrow-down"></i>
-            </div>
-            <div class="showcase-feature-text">
-              <h4>
-                <span class="lang-ar">مزامنة سحابية فورية</span>
-                <span class="lang-en">Instant Cloud Sync</span>
-              </h4>
-              <p>
-                <span class="lang-ar">حفظ تلقائي لتقدمك ومفرداتك وأوسمتك عبر خوادم سحابية فائقة الأمان.</span>
-                <span class="lang-en">Automatic sync of your vocabulary, streaks, and achievements across all your devices.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="showcase-mockup-wrapper">
-        <div class="app-mockup-container">
-          <!-- Status bar -->
-          <div class="app-mockup-status-bar">
-            <span class="app-mockup-time">9:41</span>
-            <div class="app-mockup-notch"></div>
-            <div class="app-mockup-icons">
-              <i class="fa-solid fa-signal"></i>
-              <i class="fa-solid fa-wifi"></i>
-              <i class="fa-solid fa-battery-full"></i>
-            </div>
-          </div>
-          
-          <!-- App Header -->
-          <div class="app-mockup-header">
-            <div class="app-mockup-logo">
-              <img src="assets/images/logo.png" alt="Atheer Logo" />
-            </div>
-            <button class="app-mockup-search-btn">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
-          
-          <!-- App Content -->
-          <div class="app-mockup-body">
-            <span class="app-mockup-subtitle">معمل التدريبات | Practice Hub</span>
-            <h3 class="app-mockup-title">تمارين مخصصة <br>لتطوير <span>مهاراتك</span></h3>
-            
-            <!-- 2x2 Grid of Cards -->
-            <div class="app-mockup-grid">
-              <!-- Card 1: Dictation Lab -->
-              <div class="app-mockup-card card-lavender">
-                <div class="card-inner">
-                  <h4 class="card-title">معمل الإملاء<br>Dictation Lab</h4>
-                  <button class="card-arrow-btn">↗</button>
-                </div>
-              </div>
-              
-              <!-- Card 2: Voice Chat -->
-              <div class="app-mockup-card card-yellow">
-                <div class="card-inner">
-                  <h4 class="card-title">محادثة أثير<br>Voice Chat</h4>
-                  <button class="card-arrow-btn">↗</button>
-                </div>
-              </div>
-              
-              <!-- Card 3: STEP & IELTS -->
-              <div class="app-mockup-card card-green">
-                <div class="card-inner">
-                  <h4 class="card-title">نماذج ستيب<br>STEP Tests</h4>
-                  <button class="card-arrow-btn">↗</button>
-                </div>
-              </div>
-              
-              <!-- Card 4: Vocab Bank -->
-              <div class="app-mockup-card card-beige">
-                <div class="card-inner">
-                  <h4 class="card-title">بنك المفردات<br>Vocab Bank</h4>
-                  <button class="card-arrow-btn">↗</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- --- PREVIEW SECTION --- -->
-  <section class="preview-section" id="preview">
-    <div class="container preview-grid">
-      
-      <div class="glass-card preview-visual-card">
-        <h3 style="font-family: var(--font-en); font-size: 1.2rem; text-align: left; color: var(--accent-teal);">
-          <i class="fa-solid fa-keyboard"></i> Dictation & Spelling Lab
-        </h3>
-        
-        <div class="dictation-demo-box">
-          <div class="dictation-sentence">
-            <span class="dictation-word">I</span>
-            <span class="dictation-word">practice</span>
-            <span class="dictation-word">English</span>
-            <span class="dictation-word">listening</span>
-            <span class="dictation-word">and</span>
-            <span class="dictation-word">spelling</span>
-            <span class="dictation-word">every</span>
-            <span class="dictation-word">day.</span>
-          </div>
-          
-          <div class="dictation-input-mock">
-            <span class="dictation-mock-text"><span class="dictation-cursor"></span></span>
-            <i class="fa-solid fa-headphones" style="color: var(--accent-primary)"></i>
-          </div>
-        </div>
-        
-        <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: right;">
-          <span class="lang-ar">* تجربة تفاعلية توضح كيف يقيم أثير الإملاء حرفاً بحرف مع إمكانية سماع الكلمة ببطء.</span>
-          <span class="lang-en">* Interactive feedback evaluating spelling accuracy letter-by-letter with slow audio playback.</span>
-        </p>
-      </div>
-
-      <div class="preview-content">
-        <div class="badge">
-          <span class="lang-ar">تعلم بالممارسة</span>
-          <span class="lang-en">Learn by Doing</span>
-        </div>
-        <h2 class="section-title">
-          <span class="lang-ar">معمل إملاء يعالج <span class="gradient-text">عقدة الاستماع</span></span>
-          <span class="lang-en">Dictation Lab Solving <span class="gradient-text">Listening Hurdles</span></span>
-        </h2>
-        <p class="section-subtitle">
-          <span class="lang-ar">نساعدك على ربط الصوت بالحروف الإنجليزية بدقة فائقة من خلال ١٠٠ جملة شائعة مصنفة حسب مواقف الحياة اليومية.</span>
-          <span class="lang-en">We connect sounds to English spelling with precision across 100 essential everyday sentences.</span>
-        </p>
-        
-        <div class="preview-features-list">
-          <div class="preview-feature-item">
-            <div class="preview-feature-check">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <div class="preview-feature-text">
-              <h4>
-                <span class="lang-ar">نطق عادي ونطق بطيء دقيق</span>
-                <span class="lang-en">Normal & Slow Playback</span>
-              </h4>
-              <p>
-                <span class="lang-ar">استمع للجملة بالسرعة الطبيعية أو بالسرعة البطيئة لالتقاط أصعب الحروف والمخارج.</span>
-                <span class="lang-en">Listen at normal speed or slow word-by-word mode to capture tricky nuances.</span>
-              </p>
-            </div>
-          </div>
-          
-          <div class="preview-feature-item">
-            <div class="preview-feature-check">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <div class="preview-feature-text">
-              <h4>
-                <span class="lang-ar">تقييم وتحليل فوري لكل كلمة</span>
-                <span class="lang-en">Instant Word-by-Word Scoring</span>
-              </h4>
-              <p>
-                <span class="lang-ar">تمييز الكلمات الصحيحة بالأخضر والخاطئة بالأحمر مع إمكانية سماع الكلمة المتعثرة منفردة.</span>
-                <span class="lang-en">Clear visual highlights of accurate and mistaken words with single-word tap to listen.</span>
-              </p>
-            </div>
-          </div>
-          
-          <div class="preview-feature-item">
-            <div class="preview-feature-check">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <div class="preview-feature-text">
-              <h4>
-                <span class="lang-ar">إملاء القصص والروايات المتسلسل</span>
-                <span class="lang-en">Story Sentence-by-Sentence Dictation</span>
-              </h4>
-              <p>
-                <span class="lang-ar">تدريب إملائي متقدم على أحداث القصص والروايات الكاملة لترسيخ التراكيب اللغوية.</span>
-                <span class="lang-en">Progressive dictation on entire stories to master complex syntax and context.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </section>
-
-  <!-- --- CTA SECTION --- -->
-  <section class="cta-section" id="cta">
-    <div class="container">
-      <div class="glass-card cta-box">
-        <h2 class="cta-title">
-          <span class="lang-ar">ابدأ رحلتك نحو إتقان الإنجليزية اليوم</span>
-          <span class="lang-en">Start Your Journey to English Mastery Today</span>
-        </h2>
-        <p class="cta-desc">
-          <span class="lang-ar">حمل تطبيق أثير الآن واستمتع بمكتبة القصص ومعمل الإملاء والمحادثة الصوتية الذكية.</span>
-          <span class="lang-en">Download Atheer English app now and enjoy interactive stories, dictation lab, and live voice chat.</span>
-        </p>
-        
-        <div class="cta-buttons">
-          <a href="https://apps.apple.com/app/id6770676137" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="gap: 10px;">
+        <div class="hero-buttons">
+          <a href="https://apps.apple.com/app/id6770676137" target="_blank" rel="noopener noreferrer" class="btn-primary">
             <i class="fa-brands fa-apple fa-lg"></i>
             <span class="lang-ar">تحميل من App Store</span>
             <span class="lang-en">Download on App Store</span>
           </a>
-          <a href="#cta" class="btn btn-secondary" style="gap: 10px;">
-            <i class="fa-brands fa-google-play fa-lg"></i>
-            <span class="lang-ar">جوجل بلاي (قريباً)</span>
-            <span class="lang-en">Google Play (Soon)</span>
+          <a href="#features" class="btn-secondary">
+            <span class="lang-ar">استكشف الميزات</span>
+            <span class="lang-en">Explore Features</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Interactive Visual Mockup -->
+      <div class="phone-mockup-card">
+        <div class="mockup-app-bar">
+          <span class="mockup-title">
+            <i class="fa-solid fa-headphones" style="color: var(--primary);"></i>
+            <span class="lang-ar">مشغل القصة التفاعلي</span>
+            <span class="lang-en">Interactive Story Player</span>
+          </span>
+          <span class="live-badge">Level A2</span>
+        </div>
+        
+        <div class="mockup-story-card">
+          <div class="mockup-story-header">
+            <span style="font-weight: 700; font-size: 0.9rem;">The Rainy Library</span>
+            <span class="story-badge">Story #14</span>
+          </div>
+          <p class="story-text-line">
+            "Sarah opened the wooden door and <span class="hl-word">discovered</span> a quiet room filled with old books."
+          </p>
+        </div>
+        
+        <div class="mockup-player-bar">
+          <div class="player-info">
+            <div class="play-icon-btn">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700;">تسجيل صوتي بشري</div>
+              <div style="font-size: 0.75rem; color: #94A3B8;">0:45 / 2:30</div>
+            </div>
+          </div>
+          <span style="font-size: 0.75rem; background: rgba(255,255,255,0.15); padding: 4px 8px; border-radius: 6px;">1.0x Normal</span>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- --- FEATURES SECTION --- -->
+  <section class="section" id="features" style="background: #FFF; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="lang-ar">مكونات التطبيق الفعلية</span>
+          <span class="lang-en">Core App Features</span>
+        </div>
+        <h2 class="section-title">
+          <span class="lang-ar">كل ما تحتاجه للتعلم اليومي</span>
+          <span class="lang-en">Everything You Need for Daily Practice</span>
+        </h2>
+        <p class="section-subtitle">
+          <span class="lang-ar">أدوات تعليمية عملية ومباشرة مصممة لتساعدك على القراءة، الاستماع، الكتابة، والتحدث.</span>
+          <span class="lang-en">Practical, direct learning tools designed to help you read, listen, write, and speak.</span>
+        </p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box" style="background: #EFF6FF; color: var(--primary);">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <h3 class="feature-title">
+            <span class="lang-ar">مكتبة القصص والروايات</span>
+            <span class="lang-en">Audio Stories & Novels</span>
+          </h3>
+          <p class="feature-desc">
+            <span class="lang-ar">قصص مقسمة حسب المستويات (A1 إلى C2) مع تسجيلات صوتية بشرية حقيقية وتظليل متزامن للكلمات وترجمة مباشرة.</span>
+            <span class="lang-en">Graded stories from A1 to C2 with authentic human audio recordings, synchronized text highlighting, and instant translation.</span>
+          </p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box" style="background: #F0FDF4; color: var(--accent-teal);">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <h3 class="feature-title">
+            <span class="lang-ar">معمل الإملاء والاستماع</span>
+            <span class="lang-en">Dictation & Spelling Lab</span>
+          </h3>
+          <p class="feature-desc">
+            <span class="lang-ar">١٠٠ جملة أساسية شائعة مصنفة مع خياري الصوت العادي والبطيء (كلمة بكلمة) لفحص دقة كتابتك وتصحيح الحروف.</span>
+            <span class="lang-en">100 essential everyday sentences with normal and slow word-by-word audio to evaluate your spelling accuracy letter by letter.</span>
+          </p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box" style="background: #FAF5FF; color: var(--accent-purple);">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="feature-title">
+            <span class="lang-ar">الدردشة الصوتية مع أثير</span>
+            <span class="lang-en">Live AI Voice Chat</span>
+          </h3>
+          <p class="feature-desc">
+            <span class="lang-ar">محادثة صوتية حية في مواقف واقعية (مطار، مطعم، فندق، مقابلة عمل) لتجاوز حاجز التردد وتصحيح العبارات.</span>
+            <span class="lang-en">Live conversational practice across everyday scenarios (travel, dining, interviews) to overcome hesitation and refine phrasing.</span>
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-box" style="background: #FFFBEB; color: var(--accent-amber);">
+            <i class="fa-solid fa-bookmark"></i>
+          </div>
+          <h3 class="feature-title">
+            <span class="lang-ar">بنك المفردات والفلاش كاردز</span>
+            <span class="lang-en">Vocabulary Bank</span>
+          </h3>
+          <p class="feature-desc">
+            <span class="lang-ar">احفظ أي كلمة جديدة تصادفك أثناء القراءة بضغطة زر واحدة، وراجعها بنظام البطاقات التعليمية للتثبيت في الذاكرة.</span>
+            <span class="lang-en">Save any new word while reading with a single tap, and review it using flashcards to reinforce long-term memory.</span>
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-box" style="background: #FFF1F2; color: var(--accent-rose);">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="feature-title">
+            <span class="lang-ar">نماذج اختبارات STEP وتحديد المستوى</span>
+            <span class="lang-en">STEP & Level Placement</span>
+          </h3>
+          <p class="feature-desc">
+            <span class="lang-ar">اختبار تشخيصي أولي لتحديد مستواك، ونماذج أسئلة تدريبية تحاكي اختبارات STEP الرسمية لقياس تقدمك.</span>
+            <span class="lang-en">Initial placement test to determine your starting level, plus practice questions simulating standard STEP exam formats.</span>
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-box" style="background: #F8FAFC; color: #475569;">
+            <i class="fa-solid fa-chart-simple"></i>
+          </div>
+          <h3 class="feature-title">
+            <span class="lang-ar">تتبع التقدم اليومي والأوسمة</span>
+            <span class="lang-en">Daily Progress & Badges</span>
+          </h3>
+          <p class="feature-desc">
+            <span class="lang-ar">لوحة واضحة تسجل عدد الكلمات المقروءة، وساعات الاستماع، ومؤشر الشعلة اليومية للحفاظ على استمرارية التعلم.</span>
+            <span class="lang-en">A clear dashboard tracking words read, listening time, and daily streak milestones to keep you consistently motivated.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- DICTATION LAB SHOWCASE --- -->
+  <section class="section" id="dictation">
+    <div class="container">
+      <div class="showcase-box">
+        <div class="showcase-content">
+          <div class="section-tag">
+            <span class="lang-ar">تدريب الاستماع والكتابة</span>
+            <span class="lang-en">Listening & Writing Practice</span>
+          </div>
+          <h3 class="section-title">
+            <span class="lang-ar">كيف يعمل معمل الإملاء؟</span>
+            <span class="lang-en">How Dictation Lab Works</span>
+          </h3>
+          <p>
+            <span class="lang-ar">يساعدك معمل الإملاء على تدريب أذنك على التقاط الكلمات الإنجليزية وكتابتها بشكل صحيح دون أخطاء إملائية.</span>
+            <span class="lang-en">Dictation Lab trains your ear to catch spoken English words and type them accurately without spelling mistakes.</span>
+          </p>
+          
+          <ul class="checklist">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <span class="lang-ar">استماع لصوت المتحدث بالسرعة العادية أو بالسرعة البطيئة.</span>
+              <span class="lang-en">Listen at normal speed or slow word-by-word pace.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <span class="lang-ar">كتابة الجملة وتصحيح الكلمات حرفاً بحرف تلقائياً.</span>
+              <span class="lang-en">Type the sentence with instant letter-by-letter verification.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <span class="lang-ar">الضغط على أي كلمة متعثرة لإعادة سماع نطقها بمفردها.</span>
+              <span class="lang-en">Tap any mistaken word to listen to its pronunciation individually.</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="dictation-interactive-preview">
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); margin-bottom: 12px;">
+            <span class="lang-ar">معاينة التقييم الإملائي:</span>
+            <span class="lang-en">Spelling Evaluation Preview:</span>
+          </div>
+          
+          <div class="preview-sentence-row">
+            <span class="p-word correct">I</span>
+            <span class="p-word correct">listen</span>
+            <span class="p-word correct">to</span>
+            <span class="p-word correct">English</span>
+            <span class="p-word correct">stories</span>
+            <span class="p-word correct">daily.</span>
+          </div>
+          
+          <div class="preview-audio-controls">
+            <div class="audio-chip">
+              <i class="fa-solid fa-volume-high" style="color: var(--primary);"></i>
+              <span>1.0x Normal</span>
+            </div>
+            <div class="audio-chip">
+              <i class="fa-solid fa-person-walking" style="color: var(--accent-amber);"></i>
+              <span>0.75x Slow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- CTA --- -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <h2 class="cta-title">
+          <span class="lang-ar">ابدأ رحلة التعلم مع أثير اليوم</span>
+          <span class="lang-en">Start Your Learning Journey with Atheer</span>
+        </h2>
+        <p class="cta-desc">
+          <span class="lang-ar">حمل التطبيق الآن على جهاز الآيفون والآيباد واستمتع بالقصص ومعمل الإملاء.</span>
+          <span class="lang-en">Download the app now on your iPhone and iPad to explore stories and dictation exercises.</span>
+        </p>
+        <div>
+          <a href="https://apps.apple.com/app/id6770676137" target="_blank" rel="noopener noreferrer" class="store-btn">
+            <i class="fa-brands fa-apple fa-xl"></i>
+            <span class="lang-ar">تحميل من App Store</span>
+            <span class="lang-en">Download on App Store</span>
           </a>
         </div>
       </div>
@@ -575,49 +344,45 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo" style="margin-bottom: 0.5rem;">
-            <img src="assets/images/logo.png" alt="Atheer Logo" class="brand-logo">
+          <div class="logo">
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="Atheer Logo" class="brand-logo">
+              <span class="brand-name">أثير | Atheer</span>
+            </a>
           </div>
           <p>
-            <span class="lang-ar">رفيقك الذكي لتعلم وإتقان اللغة الإنجليزية عبر تقنيات التعرف الصوتي وقصص تفاعلية لتطوير مستواك بشكل دقيق.</span>
-            <span class="lang-en">Your smart companion to learn and master English through voice recognition and interactive stories to track your level accurately.</span>
+            <span class="lang-ar">تطبيق تعليمي لتطوير مهارات اللغة الإنجليزية من خلال القصص المسموعة، معمل الإملاء، والمحادثة الصوتية.</span>
+            <span class="lang-en">An educational app to learn English through audio stories, dictation exercises, and voice conversation.</span>
           </p>
-          <div class="social-links">
-            <a href="https://www.tiktok.com/@atheerengapp" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/@atheerenglishapp" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-            <a href="mailto:support@atheerapp.com" class="social-link"><i class="fa-solid fa-envelope"></i></a>
-          </div>
         </div>
         
-        <div class="footer-links-col">
-          <h4 class="footer-col-title">
+        <div class="footer-col">
+          <h4>
             <span class="lang-ar">روابط سريعة</span>
-            <span class="lang-en">Quick Links</span>
+            <span class="lang-en">Navigation</span>
           </h4>
           <ul>
-            <li><a href="#hero"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a></li>
             <li><a href="#features"><span class="lang-ar">الميزات</span><span class="lang-en">Features</span></a></li>
-            <li><a href="#app-showcase"><span class="lang-ar">معمل التدريبات</span><span class="lang-en">Practice Hub</span></a></li>
-            <li><a href="#preview"><span class="lang-ar">معمل الإملاء</span><span class="lang-en">Dictation Lab</span></a></li>
+            <li><a href="#dictation"><span class="lang-ar">معمل الإملاء</span><span class="lang-en">Dictation Lab</span></a></li>
+            <li><a href="https://apps.apple.com/app/id6770676137" target="_blank"><span class="lang-ar">رابط App Store</span><span class="lang-en">App Store Link</span></a></li>
           </ul>
         </div>
 
-        <div class="footer-links-col">
-          <h4 class="footer-col-title">
+        <div class="footer-col">
+          <h4>
             <span class="lang-ar">الدعم والمساعدة</span>
-            <span class="lang-en">Support & Help</span>
+            <span class="lang-en">Support</span>
           </h4>
           <ul>
-            <li><a href="contact.html"><span class="lang-ar">اتصل بنا</span><span class="lang-en">Contact Us</span></a></li>
-            <li><a href="mailto:support@atheerapp.com"><span class="lang-ar">البريد الإلكتروني</span><span class="lang-en">Email Support</span></a></li>
-            <li><a href="tel:+966570491716"><span class="lang-ar">هاتف: +٩٦٦٥٧٠٤٩١٧١٦</span><span class="lang-en">Call: +966570491716</span></a></li>
+            <li><a href="mailto:support@atheerapp.com"><span class="lang-ar">البريد: support@atheerapp.com</span><span class="lang-en">support@atheerapp.com</span></a></li>
+            <li><a href="tel:+966570491716"><span class="lang-ar">هاتف: ٠٥٧٠٤٩١٧١٦</span><span class="lang-en">+966570491716</span></a></li>
           </ul>
         </div>
 
-        <div class="footer-links-col">
-          <h4 class="footer-col-title">
-            <span class="lang-ar">قوانين وشروط</span>
-            <span class="lang-en">Legal & Terms</span>
+        <div class="footer-col">
+          <h4>
+            <span class="lang-ar">الشروط والخصوصية</span>
+            <span class="lang-en">Legal</span>
           </h4>
           <ul>
             <li><a href="privacy.html"><span class="lang-ar">سياسة الخصوصية</span><span class="lang-en">Privacy Policy</span></a></li>
@@ -627,14 +392,14 @@
       </div>
       
       <div class="footer-bottom">
-        <p>
-          <span class="lang-ar">جميع الحقوق محفوظة &copy; 2026 تطبيق أثير لتعليم الإنجليزية.</span>
-          <span class="lang-en">All rights reserved &copy; 2026 Atheer English App.</span>
-        </p>
-        <p>
-          <span class="lang-ar">صُمم بحب لمساعدة الدارسين والطلاب في العالم العربي.</span>
-          <span class="lang-en">Designed with love to empower learners across the Arab world.</span>
-        </p>
+        <div>
+          <span class="lang-ar">جميع الحقوق محفوظة &copy; ٢٠٢٦ تطبيق أثير لتعليم الإنجليزية.</span>
+          <span class="lang-en">&copy; 2026 Atheer English App. All rights reserved.</span>
+        </div>
+        <div>
+          <span class="lang-ar">الرياض، المملكة العربية السعودية</span>
+          <span class="lang-en">Riyadh, Saudi Arabia</span>
+        </div>
       </div>
     </div>
   </footer>
