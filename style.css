@@ -1,37 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Clean, Premium Palette */
-  --bg-main: #FAFBFC;
+  /* Fresh & Elegant Light Theme - Mint & Soft Teal */
+  --bg-main: #F8FAF9;
   --bg-card: #FFFFFF;
-  --bg-card-subtle: #F1F5F9;
+  --bg-card-subtle: #E8F3F1;
   --bg-dark: #0F172A;
   
-  --primary: #2563EB;
-  --primary-hover: #1D4ED8;
-  --primary-light: #EFF6FF;
-  --primary-border: #DBEAFE;
+  --primary: #0D9488;
+  --primary-hover: #0F766E;
+  --primary-light: #CCFBF1;
+  --primary-border: #99F6E4;
   
-  --accent-purple: #7C3AED;
-  --accent-teal: #0D9488;
-  --accent-amber: #D97706;
-  --accent-rose: #E11D48;
+  --accent-purple: #8B5CF6;
+  --accent-teal: #14B8A6;
+  --accent-amber: #F59E0B;
+  --accent-rose: #F43F5E;
 
-  --text-main: #0F172A;
-  --text-muted: #64748B;
+  --text-main: #134E4A;
+  --text-muted: #475569;
   --text-subtle: #94A3B8;
 
-  --border: #E2E8F0;
-  --border-light: #F1F5F9;
+  --border: #E5E7EB;
+  --border-light: #F3F4F6;
 
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  --radius-sm: 16px;
+  --radius-md: 24px;
+  --radius-lg: 36px;
   --radius-pill: 9999px;
 
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.06);
-  --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.08);
+  --shadow-sm: 0 4px 10px rgba(13, 148, 136, 0.04);
+  --shadow-md: 0 16px 40px rgba(13, 148, 136, 0.08);
+  --shadow-lg: 0 24px 64px rgba(13, 148, 136, 0.12);
 
   --font-ar: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-en: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -205,6 +205,13 @@ header {
 .hero-title .highlight {
   color: var(--primary);
   position: relative;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--accent-teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-desc {
