@@ -13,9 +13,12 @@
   const LETTERS = ['A', 'B', 'C', 'D'];
   const ARABIC_LETTERS = { 'أ': 0, 'ا': 0, 'إ': 0, 'ب': 1, 'ج': 2, 'د': 3 };
   const LEVELS = {
+    grammar: 'قواعد وتراكيب STEP ⚡',
+    vocab: 'مفردات وسياق STEP 📚',
+    trap: 'فخاخ قياس المتكررة 🔥',
+    structure: 'تحليل كتابي وترقيم 🎯',
     easy: 'مستوى 1: إحماء سهل ⚡',
-    trap: 'مستوى 2: فخاخ شائعة 🔥',
-    pro: 'مستوى 3: للمحترفين فقط 🧠',
+    pro: 'مستوى 3: للمحترفين 🧠',
   };
   const MEDALS = ['🥇', '🥈', '🥉'];
   const STORAGE_KEY = 'tiktokQuizPlayers_v2';
@@ -54,21 +57,23 @@
   const ALL = (window.QUIZ_QUESTIONS || []).map(([level, sentence, translation, opts, explanation], id) => ({
     id, level, sentence, translation, opts, explanation,
   }));
-  const pools = { easy: [], trap: [], pro: [] };
+  const pools = {};
 
   function fromPool(level) {
+    if (!pools[level]) pools[level] = [];
     if (!pools[level].length) pools[level] = shuffle(ALL.filter((q) => q.level === level));
-    return pools[level].pop();
+    return pools[level].pop() || ALL[Math.floor(Math.random() * ALL.length)];
   }
   function buildRound() {
     const round = [];
-    for (const lvl of ['easy', 'trap', 'pro']) {
+    const keys = Object.keys(CFG.round || { grammar: 4, vocab: 3, trap: 3, structure: 2 });
+    for (const lvl of keys) {
       for (let i = 0; i < (CFG.round[lvl] || 0); i++) {
         const q = fromPool(lvl);
         if (q) round.push(q);
       }
     }
-    return round;
+    return round.length ? round : shuffle(ALL).slice(0, 12);
   }
 
   /* ---------------- Players / scores ---------------- */
@@ -595,6 +600,32 @@
     }));
   }
 
+  /* ---------------- Theme & Interactions ---------------- */
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    if ($('themeToggleBtn')) $('themeToggleBtn').textContent = isDark ? '🌙 مظهر داكن' : '☀️ مظهر فاتح';
+    try { localStorage.setItem('stepQuizTheme', isDark ? 'dark' : 'light'); } catch {}
+  }
+  // Default is light; check if user explicitly requested dark
+  if (params.get('theme') === 'dark' || localStorage.getItem('stepQuizTheme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    if ($('themeToggleBtn')) $('themeToggleBtn').textContent = '🌙 مظهر داكن';
+  } else {
+    document.body.classList.remove('dark-mode');
+    if ($('themeToggleBtn')) $('themeToggleBtn').textContent = '☀️ مظهر فاتح';
+  }
+
+  // Allow direct click on options for manual testing or web interaction
+  $('optionsContainer').addEventListener('click', (e) => {
+    const card = e.target.closest('.option-card');
+    if (!card || !S.q) return;
+    const idx = Number(card.id.replace('option-', ''));
+    if (!isNaN(idx) && idx >= 0 && idx < S.q.options.length) {
+      onChat({ id: 'player_local', nick: 'أنت 👤' }, LETTERS[idx]);
+    }
+  });
+
   /* ---------------- Controls ---------------- */
   function togglePause() {
     S.paused = !S.paused;
@@ -621,6 +652,30 @@
     after(CFG.leaderboardSeconds * 1000, () => startQuestion(takeNext()));
   }
 
+  /* ---------------- Interactive Simulation for Testing ---------------- */
+  const MOCK_NAMES = ['سارة 🌸', 'أحمد ⚡', 'نورة 👑', 'خالد 🎯', 'ريم ✨', 'فهد 🔥', 'عمر 🚀', 'دانة 💫', 'سلمان 🏆', 'شهد 💎'];
+  function triggerSimulation() {
+    if (!S.q) return;
+    const totalSim = 4 + Math.floor(Math.random() * 4);
+    for (let i = 0; i < totalSim; i++) {
+      setTimeout(() => {
+        if (!S.q) return;
+        const name = MOCK_NAMES[i % MOCK_NAMES.length];
+        const isRight = Math.random() < 0.7;
+        const letter = isRight ? LETTERS[S.q.correctIndex] : LETTERS[Math.floor(Math.random() * S.q.options.length)];
+        onChat({ id: 'sim_' + name, nick: name }, letter);
+      }, i * 350);
+    }
+    // Occasionally trigger a gift for excitement
+    if (Math.random() < 0.3) {
+      setTimeout(() => {
+        onGift({ user: { id: 'sim_vip', nick: 'فهد 🔥' }, giftName: 'Rose', count: 5, diamonds: 5 });
+      }, 1200);
+    }
+  }
+
+  if ($('simBtn')) $('simBtn').addEventListener('click', triggerSimulation);
+  if ($('themeToggleBtn')) $('themeToggleBtn').addEventListener('click', toggleTheme);
   $('playPauseBtn').addEventListener('click', togglePause);
   $('nextBtn').addEventListener('click', nextQuestion);
   $('prevBtn').addEventListener('click', prevQuestion);
@@ -632,6 +687,8 @@
 
   addEventListener('keydown', (e) => {
     if (e.code === 'Space') { e.preventDefault(); togglePause(); }
+    else if (e.code === 'KeyX') triggerSimulation();
+    else if (e.code === 'KeyD' && e.shiftKey) toggleTheme();
     else if (e.code === 'ArrowRight' || e.code === 'KeyN') nextQuestion();
     else if (e.code === 'ArrowLeft' || e.code === 'KeyP') prevQuestion();
     else if (e.code === 'KeyM') toggleMute();
@@ -639,6 +696,10 @@
     else if (e.code === 'KeyT') document.body.classList.toggle('obs-transparent');
     else if (e.code === 'KeyL') forceLeaderboard();
     else if (e.code === 'KeyR' && e.shiftKey) resetScores();
+    else if (e.code === 'KeyA' || e.key === '1') onChat({ id: 'player_local', nick: 'أنت 👤' }, 'A');
+    else if (e.code === 'KeyB' || e.key === '2') onChat({ id: 'player_local', nick: 'أنت 👤' }, 'B');
+    else if (e.code === 'KeyC' || e.key === '3') onChat({ id: 'player_local', nick: 'أنت 👤' }, 'C');
+    else if (e.code === 'KeyD' || e.key === '4') onChat({ id: 'player_local', nick: 'أنت 👤' }, 'D');
   });
 
   // Debug hook for testing in the browser console: quiz.chat('Sara', 'B')
