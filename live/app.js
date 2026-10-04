@@ -473,6 +473,11 @@
     sound.playFollow();
   }
 
+  function onJoin({ user }) {
+    if (!user) return;
+    toast(`نورت البث <span class="t-name">${esc(shortNick(user.nick))}</span>! 🌟`, 'join', 3500);
+  }
+
   /* ---------------- Toasts ---------------- */
   const toastQueue = [];
   function toast(html, kind = '', ms = 4000) {
@@ -581,6 +586,7 @@
       if (m.type === 'chat') onChat(m.user, m.text);
       else if (m.type === 'gift') onGift(m);
       else if (m.type === 'follow') onFollow(m);
+      else if (m.type === 'member' || m.type === 'join') onJoin(m);
       else if (m.type === 'status') setConn(m.state, m.message);
     };
     ws.onclose = () => {

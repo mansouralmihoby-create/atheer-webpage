@@ -25,7 +25,7 @@ const args = Object.fromEntries(
 
 const PORT = Number(args.port || process.env.PORT || 8080);
 const HOST = args.host || '127.0.0.1';
-const USERNAME = String(args.user || process.env.TIKTOK_USERNAME || 'atheerengapp').replace(/^@/, '').trim();
+const USERNAME = String(args.user || process.env.TIKTOK_USERNAME || 'atheerenglishapp').replace(/^@/, '').trim();
 const DEMO = Boolean(args.demo);
 const RECONNECT_MS = 15000;
 // Optional helpers for when TikTok blocks the room lookup:
