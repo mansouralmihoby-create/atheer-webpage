@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تحدي تخمين الكلمة - بث تيك توك التفاعلي</title>
+  <meta name="description" content="قالب بث مباشر تفاعلي لتحدي الإنجليزية على تيك توك: تصويت الشات، لوحة متصدرين، وهدايا تفاعلية.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- 1080x1920 stage, scaled to fit the window (1:1 inside OBS) -->
+  <main id="stage" class="stream-container">
+    <canvas id="confetti" class="confetti-canvas"></canvas>
+    <div id="toasts" class="toasts"></div>
+
+    <!-- ============ TOP ============ -->
+    <header class="top-header">
+      <div class="badge-row">
+        <div id="levelBadge" class="level-badge easy">مستوى 1: إحماء سهل ⚡</div>
+        <div id="multiplierBadge" class="multiplier-badge hidden"></div>
+      </div>
+
+      <div class="action-banner">
+        <h1 class="action-title">خمّن الكلمة واكتب الحرف في الشات! 💬👇</h1>
+        <div class="action-sub">3 إجابات صح متتالية = أسطورة 👑</div>
+      </div>
+
+      <div class="progress-info">
+        <span id="questionCounter">سؤال 1</span>
+        <span id="answerCounter" class="answer-counter">✍️ 0 إجابة</span>
+        <span class="live-tag"><i class="live-dot"></i> مباشر</span>
+      </div>
+
+      <div id="miniBoard" class="mini-board">🏆 كن أول من يدخل لوحة المتصدرين!</div>
+    </header>
+
+    <!-- ============ MIDDLE ============ -->
+    <section class="main-stage">
+      <!-- Quiz card -->
+      <div id="quizCard" class="challenge-card">
+        <div id="sentenceText" class="english-sentence" dir="ltr"></div>
+        <div class="arabic-translation"><span>📖</span><span id="translationText"></span></div>
+
+        <div id="timerContainer" class="timer-container">
+          <div class="timer-box">
+            <svg class="timer-svg" viewBox="0 0 140 140">
+              <circle class="timer-circle-bg" cx="70" cy="70" r="60"></circle>
+              <circle id="timerCircleProgress" class="timer-circle-progress" cx="70" cy="70" r="60"></circle>
+            </svg>
+            <div id="timerNumber" class="timer-number">10</div>
+          </div>
+        </div>
+
+        <div id="optionsContainer" class="options-grid" dir="ltr"></div>
+
+        <div id="resultBox" class="result-box">
+          <div id="resultStats" class="result-stats"></div>
+          <div id="winners" class="winners"></div>
+          <div class="explanation">
+            <span class="explanation-title">💡 السر:</span>
+            <span id="explanationText"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leaderboard interlude -->
+      <div id="leaderboardCard" class="challenge-card leaderboard-card hidden">
+        <h2 class="lb-title">🏆 ترتيب المتصدرين</h2>
+        <ol id="leaderboardList" class="lb-list"></ol>
+        <div class="lb-cta">اكتب إجابتك في الشات لتدخل القائمة! 🔥</div>
+      </div>
+    </section>
+
+    <!-- ============ BOTTOM SAFE AREA (TikTok comments) ============ -->
+    <footer class="safety-zone">
+      <div class="chat-prompt">⚡ اكتب A أو B أو C في التعليقات</div>
+    </footer>
+  </main>
+
+  <!-- Streamer controls (hidden with ?stream=1 or key H) -->
+  <aside id="streamerControls" class="streamer-controls">
+    <span id="connStatus" class="conn-status" title="حالة الاتصال بالبث"><i></i><b>غير متصل</b></span>
+    <button id="prevBtn" class="ctrl-btn" title="السابق (←)">⏮</button>
+    <button id="playPauseBtn" class="ctrl-btn" title="إيقاف/تشغيل (مسافة)">⏸ إيقاف</button>
+    <button id="nextBtn" class="ctrl-btn" title="التالي (→)">⏭</button>
+    <button id="boardBtn" class="ctrl-btn" title="عرض المتصدرين (L)">🏆</button>
+    <button id="soundToggleBtn" class="ctrl-btn" title="الصوت (M)">🔊</button>
+    <button id="bgToggleBtn" class="ctrl-btn" title="خلفية شفافة (T)">🎭</button>
+    <button id="resetBtn" class="ctrl-btn danger" title="تصفير النقاط (Shift+R)">♻️</button>
+  </aside>
+
+  <script>window.FORCE_STREAM = true;</script>
+  <script src="config.js"></script>
+  <script src="questions.js"></script>
+  <script src="audio.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
