@@ -766,19 +766,12 @@ body.dark-mode .premium-ad-banner {
   100% { transform: scale(1.02); }
 }
 
-.ad-logo-box {
-  background: #3b2326; /* Dark brown from the logo */
-  color: #fff;
-  font-family: 'Outfit', sans-serif;
-  font-size: 32px;
-  font-weight: 900;
-  padding: 12px 24px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 16px rgba(59, 35, 38, 0.3);
-  letter-spacing: -1px;
+.ad-logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: transparent;
 }
 
 .ad-info {
